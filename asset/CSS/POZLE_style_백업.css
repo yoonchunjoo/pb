@@ -1,0 +1,1420 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+ul, ol, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{width: 100%; vertical-align: top;}
+.flex{display: flex;}
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{font-family: 'Pretendard-Medium';
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 30px;
+}
+h2{font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+h3{font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+}
+h4{font-family: 'Pretendard-Light';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+h5{font-family: 'Pretendard-Light';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+}
+h6{font-family: 'Pretendard-Light';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+
+/* ---- top 영역 */
+header .top{
+    padding: 0 20px;
+    position: relative;
+    color:#195e5c;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+}
+header .top i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+}
+header .top h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/* ----하단고정 GNB */
+nav .GNB_bottom{
+    position: fixed;
+    bottom: 0;
+    background: black;
+    width: 100%;
+    height: 60px;
+    justify-content: space-around;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+nav .GNB_bottom li{
+    color: #fff;
+    text-align: center;
+    margin-top: 11px;
+}
+nav .GNB_bottom li:hover{
+    color: #00ab40;
+}
+nav .GNB_bottom i{
+    font-size: 22px;
+}
+
+
+/* ---- (section, aside 영역) 안쪽 상하좌우 여백 */
+section {
+    padding: 10% 7% 0;
+    margin-bottom: 80px;
+}
+aside {
+    margin-bottom: 90px;
+}
+
+/* ---- 버튼 family */
+/*  ------- 초록 긴 네모 버튼 (자유형) */
+button.green_long_btn{
+    margin-top: 10%;
+    border: 0;
+    outline: 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #00ab40;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    z-index: -111;
+}
+
+
+/*  ------- 초록 긴 네모 버튼 (하단 고정용) */
+.bottom_fix_btn{
+    padding: 0 7%;
+    width: 100%;
+    left: 50%;
+    bottom: 6%;
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: -111;
+}
+.bottom_fix_btn button.green_long_fix_btn{
+    margin-top: 10%;
+    border: 0;
+    outline: 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #00ab40;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+
+/*  ------- 언더라인 버튼 (하단 고정용) */
+.bottom_fix_btn .line_btn{
+    margin-top: 6%;
+    color: #999999;
+    text-align: center;
+    text-decoration: underline;
+    z-index: -111;
+}
+
+
+/* ---- 알림(notice) 메세지 */
+section .notice_msg{
+    text-align: center;
+}
+section .notice_msg h2{
+    color: #197c40;
+}
+section .notice_msg h4{
+    color: #333333;
+    margin-top: 5%;
+}
+
+
+/* ---- 텍스트 박스 모음 */
+/* ---- 텍스트 박스 (제목 + 박스형 full) */
+.text_box h3{
+    margin-bottom: 3%;
+}
+.text_box .text_box_full {
+    border: 1px solid #cccccc;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    padding-left: 5%;
+    color: #333333;
+}
+
+
+/* ---- 텍스트 박스 + 체크 버튼 */
+.text_ckbox{
+    justify-content: space-between;
+    margin: 10% 0;
+}
+.text_ckbox .text_hf_box{
+    border: 1px solid #cccccc;
+    width: 67%;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    padding-left: 5%;
+    color: #333333;
+}
+.text_ckbox .ckeck_btn{
+    text-align: center;
+    border: 0;
+    outline: 0;
+    width: 30%;
+    height: 50px;
+    background: #197c40;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+.text_ckbox .ckeck_btn:hover{
+    background: #cccccc;
+}
+
+/* ---- 초록 라인 (타이틀)박스 */
+.green_line_title{
+    border: 1px solid #197c40;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 5%;
+}
+.green_line_title h4{
+    width: 100%;
+    color: #333333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---- 스캔 박스 */
+.scan_box{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 5% 0;
+    border-radius: 10px 10px 0 0;
+    background:rgba(40, 40, 40, 0.9);
+}
+.scan_box .scan_area{
+    background: black;
+    height: 30vh;
+    margin: 3% 0 5%;
+}
+
+/* ---- 동의하기 체크 버튼 */
+.Agr{
+    margin-top: 7%;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-around;
+}
+.Agr h4{
+    color: #666666;
+    margin: -1px 0 0 -17px;
+}
+.Agr a{
+    color: #666666;
+    cursor: pointer;
+    margin-top: 3px;
+}
+.Agr label.ck_off:before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 7px;
+    color: #e0e0e0;
+    font-size: 24px;
+}
+.Agr input#ck:checked + label.ck_off:before {
+    content: "\f058";
+    color: #197c40;
+}
+.Agr input#ck{
+    display: none;
+}
+
+
+
+/* ---------------- 내용 시작 */
+/* ---- 카카오톡_로그인 */
+section button.kakao_btn{
+    position: relative;
+    margin-top: 10%;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 50px;
+    background: #ffd731;
+    border-radius: 10px;
+}
+section button.kakao_btn .kakao_icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section button.kakao_btn .kakao_icon .kakao_sym{
+    background: url(../img/kakao_logo.png)no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 22px;
+}
+section button.kakao_btn .kakao_icon h3{
+    color: #381e1e;
+    width: 170px;
+}
+
+
+/* ---- 회원가입 */
+section .join {
+    border: 1px solid #197c40;
+    border-radius: 10px;
+    padding: 3% 7%;
+}
+section .join a{
+    right: 10px;
+    color: #666666;
+}
+section .join .agree h2{
+    margin-top: -3px;
+    color: #197c40;
+}
+section .join .agree h4{
+    margin-top: -2px;
+    color: #333333;
+}
+section .join .agree{
+    position: relative;
+    margin: 15px 0;
+}
+section .join .agree a{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+section .join .agree label.ck_1_bb:before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 7px;
+    color: #e0e0e0;
+    font-size: 22px;
+}
+section .join .agree input#ck_1:checked + label.ck_1_bb:before {
+    content: "\f058";
+    color: #197c40;
+}
+section .join .agree input#ck_1 {
+    display: none;
+}
+section .join .agree label.ck_2_bb:before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 7px;
+    color: #e0e0e0;
+    font-size: 22px;
+}
+section .join .agree input#ck_2:checked + label.ck_2_bb:before {
+    content: "\f058";
+    color: #197c40;
+}
+section .join .agree input#ck_2 {
+    display: none;
+}
+section .join .agree label.ck_3_bb:before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 7px;
+    color: #e0e0e0;
+    font-size: 22px;
+}
+section .join .agree input#ck_3:checked + label.ck_3_bb:before {
+    content: "\f058";
+    color: #197c40;
+}
+section .join .agree input#ck_3 {
+    display: none;
+}
+section .join .agree label.ck_4_bb:before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 7px;
+    color: #e0e0e0;
+    font-size: 22px;
+}
+section .join .agree input#ck_4:checked + label.ck_4_bb:before {
+    content: "\f058";
+    color: #197c40;
+}
+section .join .agree input#ck_4 {
+    display: none;
+}
+
+
+/* ---- 마이포즐 */
+section .my_pozle .my_name{
+    color: 333333;
+}
+section .my_pozle .my_name h3{
+    margin-top: 3px;
+}
+section .my_pozle .my_name h3 span{
+    color: #197c40;
+}
+
+/* ---- 마이포즐 : 내 계정 */
+section .my_pozle{
+    margin-top: -15px;
+}
+section .my_pozle .info{
+    margin: 7% 0 13%;
+}
+section .my_pozle .info .my_account{
+    border-bottom: 1px solid #cccccc;
+    padding: 0 0 10px;
+    justify-content: space-between;
+}
+section .my_pozle .info .my_account h4{
+    color: #666666;
+}
+
+section .my_pozle .info .my_account a{
+    margin-top: 5px;
+    color: #666666;
+}
+
+/* ---- 마이포즐 : 보유 쿠폰 */
+section .my_pozle .info .my_hold{
+    justify-content: space-between;
+}
+section .my_pozle .info .my_hold .my_coupon{
+    width: 47%;
+    border-bottom: 1px solid #cccccc;
+    padding: 20px 0 10px;
+    justify-content: space-between;
+}
+section .my_pozle .info .my_hold .my_coupon h4{
+    color: #009933;
+}
+
+section .my_pozle .info .my_hold .my_coupon a{
+    margin-top: 5px;
+    color: #666666;
+}
+
+/* ---- 마이포즐 : 보유 스탬프 */
+section .my_pozle .info .my_hold .my_Stamp{
+    width: 47%;
+    border-bottom: 1px solid #cccccc;
+    padding: 20px 0 10px;
+    justify-content: space-between;
+}
+section .my_pozle .info .my_hold .my_Stamp h4{
+    color: #009933;
+}
+
+section .my_pozle .info .my_hold .my_Stamp a{
+    margin-top: 5px;
+    color: #666666;
+}
+
+/* ---- 마이포즐 : 내 사진, 좋아요한 사진, 이지샷 링크 영역 */
+section .my_link_btn{
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    gap: 20px 0;
+}
+section .my_link_btn .my_picture{
+    width: 40vw;
+    height: 18.5vh;
+    border: 1px solid #cccccc;
+    border-radius:30px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+section .my_link_btn .my_picture a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section .my_link_btn .my_picture a .fa-image{
+    font-size: 33px;
+    color: #00ab40;
+}
+section .my_link_btn .my_picture a h2{
+    margin: 7% 0;
+}
+section .my_link_btn .my_picture a h4{
+    color: #009933;
+}
+section .my_link_btn .my_like{
+    width: 40vw;
+    height: 18.5vh;
+    border: 1px solid #cccccc;
+    border-radius:30px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+section .my_link_btn .my_like a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section .my_link_btn .my_like a .fa-heart-circle-check{
+    font-size: 33px;
+    color: #00ab40;
+}
+section .my_link_btn .my_like a h2{
+    margin: 7% 0;
+}
+section .my_link_btn .my_like a h4{
+    color: #009933;
+}
+section .my_link_btn .my_easy{
+    width: 40vw;
+    height: 18.5vh;
+    border: 1px solid #cccccc;
+    border-radius:30px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+section .my_link_btn .my_easy a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section .my_link_btn .my_easy a .fa-camera{
+    font-size: 33px;
+    color: #00ab40;
+}
+section .my_link_btn .my_easy a h2{
+    margin: 7% 0;
+}
+section .my_link_btn .my_easy a h4{
+    color: #009933;
+}
+section .bg_bottom_cat{
+    background: url(../img/pozle_cat_06_bg.png) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    width: 50vw;
+    height: 50vh;
+    position: fixed;
+    bottom: 60px;
+    right: 0;
+    z-index: -999;
+}
+
+
+/* ---- 계정관리 */
+section .account_id{
+    border-bottom: 1px solid #cccccc;
+    padding: 0 0 10px;
+}
+section .account_id h4{
+    color: #333333;
+    margin-left: 5%;
+}
+section .account_alarm .set{
+    border-bottom: 1px solid #cccccc;
+    padding: 15px 0 ;
+    justify-content: space-between;
+}
+section .account_alarm .set h4{
+    color: #333333;
+    margin-top: 3px;
+}
+section .account_alarm .set .push_1 {
+    width: 50px;
+    height: 30px;
+    background: #cccccc;
+    border-radius: 30px;
+    position: relative;
+}
+section .account_alarm .set .push_1 .circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: 0.2s;
+}
+section .account_alarm .set .push_1.right .circle {
+    left: 45%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 100, 40, 0.3);
+}
+section .account_alarm .set .push_1.right {
+    background: #00ab40;
+}
+section .account_alarm .set .push_2 {
+    width: 50px;
+    height: 30px;
+    background: #cccccc;
+    border-radius: 30px;
+    position: relative;
+}
+section .account_alarm .set .push_2 .circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: 0.2s;
+}
+section .account_alarm .set .push_2.right .circle {
+    left: 45%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 100, 40, 0.3);
+}
+section .account_alarm .set .push_2.right {
+    background: #00ab40;
+}
+section .account_alarm .set .push_3 {
+    width: 50px;
+    height: 30px;
+    background: #cccccc;
+    border-radius: 30px;
+    position: relative;
+}
+section .account_alarm .set .push_3 .circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: 0.2s;
+}
+section .account_alarm .set .push_3.right .circle {
+    left: 45%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 100, 40, 0.3);
+}
+section .account_alarm .set .push_3.right {
+    background: #00ab40;
+}
+
+
+/* ---- 기본정보 */
+.route-custom-select {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 6% 0;
+    color: #333333;
+}
+.route-custom-select h3{
+    margin-bottom: 3%;
+}  
+.route-custom-select h4{
+    color: #999999;
+}  
+.custom-select {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    border: solid 1px #cccccc;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+}
+.custom-select-text {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+.custom-select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.custom-select-list {
+    position: absolute;
+    padding: 3% 0;
+    width: 100%;
+    border-radius: 10px;
+    border: solid 1px #cccccc;
+    background: #fff;
+    text-align: left;
+    color: #333333;
+}
+.custom-select-option {
+    height: 50px;
+    line-height: 48px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+.custom-select-option:hover {
+    color: #00ab40;
+    background-color: #45cf0010;
+}
+
+
+ /* ---- 쿠폰 확인/사용 */
+aside .coupon{
+    text-align: center;
+    padding: 6% 7% 5%;
+    background: #f3f3f3;
+    width: 100%;
+}
+aside .coupon h2{
+    color: #197c40;
+    margin-bottom: 15%;
+}
+aside .coupon .coupon_list{
+    padding: 6px;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+aside .coupon .coupon_list .Cate_tit{
+    text-align: center;
+    padding: 0 5px;
+    position: relative;
+    top: -38px;
+    width: 70px;
+}
+aside .coupon .coupon_list .Cate_tit h4{
+    margin-bottom: 12px;
+}
+aside .coupon .coupon_list .Cate_tit h5{
+    color: #666666;
+    line-height: 20px;
+}
+aside .coupon .coupon_list .Cate{
+    text-align: center;
+    padding: 0 5px;
+    position: relative;
+    width: 70px;
+}
+aside .coupon .coupon_list .Cate h5{
+    color: #666666;
+    line-height: 20px;
+}
+aside .coupon .coupon_list .label{
+    color: #195e5c;
+    background: #fff;
+    border: 1px solid #195e5c;
+    border-radius: 5px;
+    margin-top: 7px;
+    width: 30px;
+    height:25px;
+    font-size: 13px;
+}
+aside .coupon .coupon_list .use_btn{
+    border: 0;
+    outline: 0;
+    background: #197c40;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #fff;
+    padding: 8px;
+    height: 40px;
+}
+aside .coupon .coupon_list .use_btn:hover{
+    background: #cccccc;
+}
+aside .coupon .coupon_ann{
+    color: #666666;
+    margin-top: 5%;
+}
+
+/* ---- 쿠폰 noti_box */
+aside .noti_box{
+    margin: 8% 7% 14%;
+    text-align: center;
+    border: 1px solid #195e5c;
+    padding: 13px 0;
+    border-radius: 10px;
+}
+aside .noti_box .noti_stick{
+    color: #195e5c;
+}
+
+/* ---- 쿠폰 만료 리스트 */
+aside .coupon_Exp{
+    text-align: center;
+    padding: 0 7% 0;
+    width: 100%;
+    margin-top: 14%;
+}
+aside .coupon_Exp .coupon_list{
+    padding: 6px;
+    height: 50px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+aside .coupon_Exp .coupon_list .Ca_tit{
+    text-align: center;
+    padding: 0 5px;
+    position: relative;
+    top: -38px;
+    width: 30%;
+}
+aside .coupon_Exp .coupon_list .Ca_tit .Adj{
+    text-align: center;
+    padding: 0 5px;
+    position: relative;
+    top: -38px;
+    width: 60%;
+}
+aside .coupon_Exp .coupon_list .Ca_tit h4{
+    margin-bottom: 12px;
+}
+aside .coupon_Exp .coupon_list .Ca_tit h5{
+    color: #666666;
+    line-height: 20px;
+}
+aside .coupon_Exp .coupon_list .Ca{
+    text-align: center;
+    padding: 0 5px;
+    position: relative;
+    width: 30%;
+}
+aside .coupon_Exp .coupon_list .Ca h5{
+    color: #666666;
+    line-height: 20px;
+}
+aside .coupon_Exp .coupon_list .label{
+    color: #195e5c;
+    background: #fff;
+    border: 1px solid #195e5c;
+    border-radius: 5px;
+    margin-top: 7px;
+    width: 30px;
+    height:25px;
+    font-size: 13px;
+}
+
+
+/* ---- 쿠폰 사용하기 */
+section .coupon_Use{
+    text-align: center;
+}
+section .coupon_Use h3{
+    color: #333333;
+}
+section .coupon_Use .coupon_num_box{
+    border: 1px solid #195e5c;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    margin: 5% 0;
+}
+section .coupon_Use .coupon_num_box h3{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #195e5c;
+    transform: translate(-50%, -50%);
+}
+section .coupon_Use h5{
+    color: #666666;
+    margin-top: 5%;
+}
+
+
+/* ---- 스탬프 확인,사용 */
+aside .stamp{
+    text-align: center;
+    padding: 6% 7% 5%;
+    background: #f3f3f3;
+    width: 100%;
+    height: 180px;
+    color: #197c40;
+}
+aside .stamp .stamp_seal{
+    position: relative;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+aside .stamp.inc{
+    text-align: center;
+    padding: 6% 7% 5%;
+    background: #f3f3f3;
+    width: 100%;
+    height: 300px;
+    color: #197c40;
+}
+aside .stamp .inc .stamp_seal{
+    position: relative;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+aside .stamp .stamp_seal .foot i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    line-height: 45px;
+    color: #fff;
+    background: #00ab40;
+}
+aside .stamp .stamp_seal .empty{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0px 8px rgba(200, 200, 200, 0.3);
+}
+
+/* ---- 발도장 포즐캣 굿즈 세트 */
+aside .stamp_ann{
+    text-align: center;
+    color: #666666;
+    width: 100%;
+    padding: 6% 0;
+    background: #f3f3f3;
+}
+aside .stamp_ann>span{
+    color: #00ab40;
+}
+aside .stamp_ann>a{
+    color: #00ab40;
+    text-decoration: underline;
+}
+
+/* ---- 스탬프 noti_box */
+aside .noti_box{
+    margin: 8% 7% 5%;
+    text-align: center;
+    border: 1px solid #195e5c;
+    padding: 13px 0;
+    border-radius: 10px;
+}
+aside .noti_box .noti_stick{
+    color: #195e5c;
+}
+
+/* ---- 스탬프 사용 내역 */
+aside .stamp_Exp{
+    text-align: center;
+    padding: 0 7%;
+    width: 100%;
+}
+aside .stamp_Exp h2{
+    color: #197c40;
+    margin-bottom: 15%;
+}
+aside .stamp_Exp .stamp_list{
+    padding: 6px 3%;
+    height: 50px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    text-align: center;
+}
+aside .stamp_Exp .stamp_list .Ca_tit{
+    position: relative;
+    top: -38px;
+    width: 20%;
+}
+aside .stamp_Exp .stamp_list .Ca_tit.Adj{
+    text-align: center;
+    padding: 0 5px;
+    top: -38px;
+    width: 50%;
+}
+aside .stamp_Exp .stamp_list .Ca_tit h4{
+    margin-bottom: 12px;
+}
+aside .stamp_Exp .stamp_list .Ca_tit h5.bd_1{
+    color: #00ab40;
+    line-height: 20px;
+    margin-top: 22px;
+}
+aside .stamp_Exp .stamp_list .Ca_tit h5.bd_2{
+    color: #666666;
+    line-height: 20px;
+}
+aside .stamp_Exp .stamp_list .Ca_tit h5.bd_3{
+    color: #666666;
+    line-height: 20px;
+    margin-top: 22px;
+}
+aside .stamp_Exp .stamp_list .Ca_tit h5.bd_Comp{
+    /* 상태 : 완료 */
+    color: #666666;
+    line-height: 20px;
+    margin-top: 22px;
+}
+aside .stamp_Exp .stamp_list .Ca_tit h5.bd_und{
+    /* 상태 : 진행중, 접수전 */
+    color: #197c40;
+    line-height: 20px;
+    margin-top: 22px;
+    text-decoration: underline;
+}
+aside .stamp_Exp .stamp_list .Ca{
+    position: relative;
+    width: 20%;
+}
+aside .stamp_Exp .stamp_list .Ca.Adj{
+    text-align: center;
+    padding: 0 5px;
+    width: 50%;
+}
+
+/* ---- 스탬프(None-타이틀) 리스트 */
+aside .stamp_Exp .stamp_list .Ca h5.bd_1{
+    color: #00ab40;
+    line-height: 20px;
+    margin-top: 10px;
+}
+aside .stamp_Exp .stamp_list .Ca h5.bd_2{
+    color: #666666;
+    line-height: 20px;
+}
+aside .stamp_Exp .stamp_list .Ca h5.bd_3{
+    color: #666666;
+    line-height: 20px;
+    margin-top: 10px;
+}
+aside .stamp_Exp .stamp_list .Ca h5.bd_Comp{
+    /* 상태 : 완료 */
+    color: #666666;
+    line-height: 20px;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+aside .stamp_Exp .stamp_list .Ca h5.bd_und{
+        /* 상태 : 진행중, 접수전 */
+    color: #197c40;
+    line-height: 20px;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+
+
+/* ---- (주소검색 API) */
+.address_API{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    z-index: 9999;
+}
+.address_API .top{
+    height: 50px;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+}
+.address_API .top h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+}
+.address_API .top i{
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: #666666;
+}
+.address_API .API_area{
+   /* background: url(../img/API_img_sample.png) no-repeat;
+   background-size: contain; */
+   border: 5px solid red;
+   width: 100%;
+   height: 90%;
+}
+
+/* ---- (팝업) 스탬프 주문서 */
+.popup_bg_1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 777;
+}
+.popup_order{
+    padding-top: 60px;
+    width: 100%;
+}
+.popup{
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    padding: 10% 7% 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+.popup_order .TR_x_btn{
+    position: relative;
+}
+/* .popup_order .TR_x_btn>i{
+    position: absolute;
+    font-size: 22px;
+    color: #999999;
+    right: 22px;
+    top: 20px;
+} */
+
+.popup h2{
+    color: #197c40;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+/* ---- 팝업 하단 버튼 */
+.PP_bg{
+    width: 100%;
+    height: 110px;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    padding: 5% 7%;
+    background: #fff;
+    box-shadow: 0 -6px 10px rgba(255, 255, 255, 0.7);
+    z-index: 888;
+}
+.PP_button{
+    justify-content: space-between;
+    position: relative;
+}
+.PP_button h3{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.PP_button .btn_Dc{
+    border: 0;
+    outline: 0;
+    width: 48%;
+    height: 50px;
+    background: #cccccc;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+}
+.PP_button .btn_Ac{
+    border: 0;
+    outline: 0;
+    width: 48%;
+    height: 50px;
+    background: #00ab40;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+}
+.PP_button .btn_long h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.PP_button .btn_long{
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 50px;
+    background: #00ab40;
+    border-radius: 10px;
+    color: #fff;
+}
+.ord_comp h4{
+    margin-top: 5%;
+    text-align: center;
+    color: #00ab40;
+}
+.blk_BG{
+    width: 100%;
+    height: 150px;
+}
+
+
+/* 연락처 */
+.num_box h3{
+    margin:4% 0 3%;
+}
+.num_box .number{
+    justify-content: space-between;
+}
+.num_box .select {
+    border: solid 1px #cccccc;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 32%;
+    height: 50px;
+}
+.num_box .select .top {
+    position: relative;
+    height: 50px;    
+}
+.num_box .select .top .btn>div {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.num_box .select .top .btn>div.active {
+    display: block;
+}
+.num_box .select .top .arrowWrap {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+}
+.num_box .select .top .arrowWrap a {
+    display: none;
+    color: #666666;
+}
+.num_box .select .top .arrowWrap a.active {
+    display: block;
+}
+.num_box .select .bottom {
+    position: absolute;
+    z-index: 222;
+    display: none;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 28%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 4% 0;
+}
+.num_box .select .bottom>div {
+    cursor: pointer;
+    padding: 15% 0;
+}
+.num_box .number .num_text{
+    text-align: center;
+    border: 1px solid #cccccc;
+    width: 32%;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    color: #333333;
+}
+
+/* ---- 연락처 (수정불가) */
+.number .num_text.Non{
+    text-align: center;
+    border: 1px solid #cccccc;
+    width: 32%;
+    height: 50px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    color: #999999;
+}
+
+/* ---- 주소검색 + 버튼 */
+.address h3{
+    margin: 4% 0 3%;
+}
+.address .Add_ckbox{
+    justify-content: space-between;
+    margin: 3% 0;
+}
+.address .Add_ckbox .Add_hf_box{
+    border: 1px solid #cccccc;
+    width: 67%;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    padding-left: 5%;
+    color: #333333;
+}
+.address .Add_ckbox .ckeck_btn{
+    text-align: center;
+    border: 0;
+    outline: 0;
+    width: 30%;
+    height: 50px;
+    background: #197c40;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+.address .Add_ckbox .ckeck_btn:hover{
+    background: #cccccc;
+}
+.address .Add_box .text_box_full {
+    margin-bottom: 3%;
+    border: 1px solid #cccccc;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    padding-left: 5%;
+    color: #333333;
+}
+
+
+/* ---- (팝업) : 필수 개인정보 동의 팝업 */
+.popup_bg_2{
+    background-color:rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 888;
+}
+.popup_info_con{
+    position: fixed;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 13% 5% 8%;
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid #197c40;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.popup_info_con{
+    position: relative;
+}
+.popup_info_con i{
+    position: absolute;
+    font-size: 22px;
+    color: #999999;
+    right: 22px;
+    top: 20px;
+}
+.popup_info_con .info_box h3{
+    text-align: center;
+    margin-bottom: 5%;
+    color: #333333;
+}
+.roll_Y {
+    padding: 0 0.5em;
+    height: 33vh;
+    overflow: auto;
+    color: #666666;
+}
+.roll_Y::-webkit-scrollbar {
+    width: 9px;
+}
+.roll_Y::-webkit-scrollbar-track { 
+    background-color: #e0e0e0;
+}
+.roll_Y::-webkit-scrollbar-thumb { 
+    background-color: #197c40;
+    border-radius: 50px;
+}
+.roll_Y::-webkit-scrollbar-button {
+    display: none;
+}
+/* ---- 팝업 하단 버튼 */
+.PP_button .btn_R_line{
+    margin-top: 8%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+    outline: 0;
+    width: 48%;
+    height: 50px;
+    border: 1px solid #00ab40;
+    border-radius: 50px;
+    text-align: center;
+    color: #00ab40;
+}
